@@ -1,26 +1,26 @@
-// factory way
-      function createUser(name) {
-        var obj = [];
-        obj.name = name;
-        obj.score = 0;
-        obj.increment = function(score) {
-          return obj.score ++;
-        }
-        obj.decrement =function(score) {
-          return obj.score --;
-        }
-        return obj;
-      }
-      var ishav = createUser("ishav");
+// // factory way
+//       function createUser(name) {
+//         var obj = [];
+//         obj.name = name;
+//         obj.score = 0;
+//         obj.increment = function(score) {
+//           return obj.score ++;
+//         }
+//         obj.decrement =function(score) {
+//           return obj.score --;
+//         }
+//         return obj;
+//       }
+//       var ishav = createUser("ishav");
 
-      ishav.increment()
-      ishav.increment()
-      ishav.increment()
-      ishav.increment()
-      ishav.increment()
-      ishav.increment()
-      ishav.increment()
-      // output [name: "ishav", score: 7, increment: ƒ, decrement: ƒ]
+//       ishav.increment()
+//       ishav.increment()
+//       ishav.increment()
+//       ishav.increment()
+//       ishav.increment()
+//       ishav.increment()
+//       ishav.increment()
+//       // output [name: "ishav", score: 7, increment: ƒ, decrement: ƒ]
 
 //       // using dunder proto
 //     function createUser(name,score = 0){
@@ -55,19 +55,31 @@
 //     // output {name: "ishav", score: 8}
 
 
-//     // object.create
 
-//     // using Object.create
-// function createUser(name,score = 0){
-//     var obj = Object.create({
-//         increment: function(score) {
-//             return obj.score ++;
-//         }
-//         decrement: function(score) {
-//             return obj.score --;
-//         }
-//     });
-//     obj.name = name;
-//     obj.score = score;
-//     return obj;
-// }
+    // using Object.create
+function createUser(name,score = 0){
+    var obj = Object.create({
+        increment: function(score) {
+            return obj.score ++;
+        },
+        decrement: function(score) {
+            return obj.score --;
+        }
+    });
+    obj.name = name;
+    obj.score = score;
+    return obj;
+}
+var ishav = createUser("ishav", 9);
+
+ishav
+// output {name: "ishav", score: 9}
+
+ishav.decrement()
+ishav.decrement()
+ishav.decrement()
+ishav.decrement()
+ishav.decrement()
+
+ishav
+// output {name: "ishav", score: 4}
