@@ -22,34 +22,52 @@
       ishav.increment()
       // output [name: "ishav", score: 7, increment: ƒ, decrement: ƒ]
 
-      // using dunder proto
-    function createUser(name,score = 0){
-    var obj = {};
-    obj.__proto__.increment = function(score) {
-        return obj.score ++;
-    }
-    obj.__proto__.decrement = function(score) {
-        return obj.score --;
-    }
-    obj.name = name;
-    obj.score = score;
-    return obj;
-    }
+//       // using dunder proto
+//     function createUser(name,score = 0){
+//     var obj = {};
+//     obj.__proto__.increment = function(score) {
+//         return obj.score ++;
+//     }
+//     obj.__proto__.decrement = function(score) {
+//         return obj.score --;
+//     }
+//     obj.name = name;
+//     obj.score = score;
+//     return obj;
+//     }
 
-    var ishav = createUser("ishav", 4)
+//     var ishav = createUser("ishav", 4)
 
-    ishav
+//     ishav
 
-    // output {name: "ishav", score: 4}
+//     // output {name: "ishav", score: 4}
 
-    ishav.increment()
+//     ishav.increment()
 
-    ishav.increment()
+//     ishav.increment()
 
-    ishav.increment()
+//     ishav.increment()
 
-    ishav.increment()
-    
-    ishav
+//     ishav.increment()
 
-    // output {name: "ishav", score: 8}
+//     ishav
+
+//     // output {name: "ishav", score: 8}
+
+
+//     // object.create
+
+//     // using Object.create
+// function createUser(name,score = 0){
+//     var obj = Object.create({
+//         increment: function(score) {
+//             return obj.score ++;
+//         }
+//         decrement: function(score) {
+//             return obj.score --;
+//         }
+//     });
+//     obj.name = name;
+//     obj.score = score;
+//     return obj;
+// }
