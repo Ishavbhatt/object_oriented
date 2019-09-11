@@ -86,7 +86,7 @@ ishav
 
 // tast
 
-function userDetal(name, username, balance=0) {
+function userDetail(name, username, balance=0) {
   var obj = {};
   obj.name = name;
   obj.username = username;
@@ -105,3 +105,7 @@ function userDetal(name, username, balance=0) {
   }
   return obj;
 }
+
+var ishav = userDetail("ishav", "bhatt", 5);
+
+ishav
