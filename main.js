@@ -138,23 +138,24 @@ ishav
 
 // using dunder proto
 function userDetail(name, username, balance = 0) {
-  var obj = {};
-  obj.name = name;
-  obj.username = username;
-  obj.balance = balance;
-  obj.__proto__.chamgename = function(chamgename) {
-    return obj.name = chamgename;
+    var obj = {};
+    obj.name = name;
+    obj.username = username;
+    obj.balance = balance;
+    obj.__proto__.chamgename = function(changename) {
+      return obj.name = chamgename;
+    }
+    obj.__proto__.changeusername = function(changeusername) {
+      return obj.name =changeusername;
+    }
+    obj.__proto__.incrementbal = function(balance) {
+      return obj.balance ++;
+    }
+    obj.__proto__.decrementbal =function(balance) {
+      return obj.balance --;
+    }
+    return obj;
   }
-  obj.__proto__.changeusername = function(changeusername) {
-    return obj.name =changeusername;
-  }
-  obj.__proto__.incrementbal = function(balance) {
-    return obj.balance ++;
-  }
-  obj.__proto__.decrementbal =function(balance) {
-    return obj.balance --;
-  }
-}
 
 // Using Object.create method
 function userDetail(name, username, balance = 0) {
