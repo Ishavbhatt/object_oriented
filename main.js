@@ -106,14 +106,16 @@ function userDetail(name, username, balance=0) {
   return obj;
 }
 
-var ishav = userDetail("ishav", "bhatt", 10);
+var ishav = userDetail("ishav", "bhatt");
 
 ishav
 
-// output {name: "ishav", username: "bhatt", balance: 5, changename: ƒ, incrementbal: ƒ, …}
+// output {name: "ishav", username: "bhatt", balance: 0, changename: ƒ, incrementbal: ƒ, …}
 
 ishav.changename("rahul");
 
 ishav
 
-// output {name: "rahul", username: "bhatt", balance: 5, changename: ƒ, incrementbal: ƒ, …}
+// output {name: "rahul", username: "bhatt", balance: 0, changename: ƒ, incrementbal: ƒ, …}
+
+ishav.
