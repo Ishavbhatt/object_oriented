@@ -134,3 +134,30 @@ ishav.changeusername("singh");
 ishav
 // output {name: "ishav", username: "singh", balance: 6, changename: ƒ, incrementbal: ƒ, …}
 
+// Using Object.create method
+function userDetail(name, username, balance=0) {
+  var obj = Object.create(
+                          {
+                            changename: function(changename) {
+                              return obj.name = chamgename;
+                            },
+
+                            changeusername: function(changeusername) {
+                              return obj.username =changeusername;
+                            },
+
+                            incrementbal: function(balance) {
+                              return obj.balance ++;
+                            },
+
+                            decrementbal: function(balance) {
+                              return obj.balance --;  
+                            }
+                          }
+                        );
+  obj.name = name;
+  obj.username = username;
+  obj.balance = balance;
+
+  return obj;
+}
