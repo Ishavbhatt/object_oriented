@@ -155,7 +155,12 @@ function userDetail(name, username, balance = 0) {
       return obj.balance --;
     }
     return obj;
-  }
+}
+
+var ishav = userDetail("ishav", "bhatt");
+
+ishav
+// output name: "ishav", username: "bhatt", balance: 0}
 
 // Using Object.create method
 function userDetail(name, username, balance = 0) {
