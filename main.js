@@ -118,4 +118,14 @@ ishav
 
 // output {name: "rahul", username: "bhatt", balance: 0, changename: ƒ, incrementbal: ƒ, …}
 
-ishav.
+ishav.incrementbal();
+ishav.incrementbal();
+ishav.incrementbal();
+ishav.incrementbal();
+ishav.incrementbal();
+ishav.incrementbal();
+
+ishav
+
+// output {name: "ishav", username: "bhatt", balance: 6, changename: ƒ, incrementbal: ƒ, …}
+
