@@ -179,38 +179,38 @@ ishav
 // output {name: "rahul", username: "singh", balance: 5}
 
 
-// Using Object.create method
-function userDetail(name, username, balance = 0) {
-  var obj = Object.create(
-                          {
-                            changename: function(changename) {
-                              return obj.name = changename;
-                            },
+// // Using Object.create method
+// function userDetail(name, username, balance = 0) {
+//   var obj = Object.create(
+//                           {
+//                             changename: function(changename) {
+//                               return obj.name = changename;
+//                             },
 
-                            changeusername: function(changeusername) {
-                              return obj.username =changeusername;
-                            },
+//                             changeusername: function(changeusername) {
+//                               return obj.username =changeusername;
+//                             },
 
-                            incrementbal: function(balance) {
-                              return obj.balance ++;
-                            },
+//                             incrementbal: function(balance) {
+//                               return obj.balance ++;
+//                             },
 
-                            decrementbal: function(balance) {
-                              return obj.balance --;  
-                            }
-                          }
-                        );
-  obj.name = name;
-  obj.username = username;
-  obj.balance = balance;
+//                             decrementbal: function(balance) {
+//                               return obj.balance --;  
+//                             }
+//                           }
+//                         );
+//   obj.name = name;
+//   obj.username = username;
+//   obj.balance = balance;
 
-  return obj;
-}
+//   return obj;
+// }
 
-var ishav = userDetail("ishav", "bhatt");
+// var ishav = userDetail("ishav", "bhatt");
 
-ishav 
+// ishav 
 
-// output {name: "ishav", username: "bhatt", balance: 0}
+// // output {name: "ishav", username: "bhatt", balance: 0}
 
-ishav.changename("rahul");
+// ishav.changename("rahul");
