@@ -161,3 +161,11 @@ function userDetail(name, username, balance=0) {
 
   return obj;
 }
+
+var ishav = userDetail("ishav", "bhatt");
+
+ishav 
+
+// output {name: "ishav", username: "bhatt", balance: 0}
+
+
