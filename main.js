@@ -129,3 +129,8 @@ ishav
 
 // output {name: "ishav", username: "bhatt", balance: 6, changename: ƒ, incrementbal: ƒ, …}
 
+ishav.changeusername("singh");
+
+ishav
+// output {name: "ishav", username: "singh", balance: 6, changename: ƒ, incrementbal: ƒ, …}
+
