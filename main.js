@@ -142,11 +142,11 @@ function userDetail(name, username, balance = 0) {
     obj.name = name;
     obj.username = username;
     obj.balance = balance;
-    obj.__proto__.chamgename = function(changename) {
-      return obj.name = chamgename;
+    obj.__proto__.changename = function(changename) {
+      return obj.name = changename;
     }
     obj.__proto__.changeusername = function(changeusername) {
-      return obj.name =changeusername;
+      return obj.username =changeusername;
     }
     obj.__proto__.incrementbal = function(balance) {
       return obj.balance ++;
@@ -162,12 +162,29 @@ var ishav = userDetail("ishav", "bhatt");
 ishav
 // output name: "ishav", username: "bhatt", balance: 0}
 
+ishav.changename("rahul");
+
+ishav.changeusername("singh");
+
+ishav
+// output {name: "rahul", username: "singh", balance: 0}
+
+ishav.incrementbal();
+ishav.incrementbal();
+ishav.incrementbal();
+ishav.incrementbal();
+ishav.incrementbal();
+
+ishav
+// output {name: "rahul", username: "singh", balance: 5}
+
+
 // Using Object.create method
 function userDetail(name, username, balance = 0) {
   var obj = Object.create(
                           {
                             changename: function(changename) {
-                              return obj.name = chamgename;
+                              return obj.name = changename;
                             },
 
                             changeusername: function(changeusername) {
@@ -196,4 +213,4 @@ ishav
 
 // output {name: "ishav", username: "bhatt", balance: 0}
 
-ishav.changename = ("rahul")
+ishav.changename("rahul");
