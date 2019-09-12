@@ -333,3 +333,56 @@ function paidUser(name, score, balance) {
   user.balance = balance;
   return user;
 }
+
+// class
+class User {
+  constructor(name, score) {
+    this.name = name;
+    this.score = score;
+    }
+  increment = function() {
+    return this.score ++;
+    }
+  decrement = function() {
+    return this.score --;
+    }
+}
+
+class paidUser extends User {
+  constructor(name, score, balance) {
+    super(name, score);
+    this.balance = balance;
+    }
+  incbal = function() {
+    return this.balance ++;
+    }
+  decbal = function() {
+    return this.balance --;
+    }
+}
+
+// psudo 
+function createUser(name, score) {
+  this.name = name;
+  this.score = score;
+}
+createUser.prototype.incscore = function() { return this.score ++;}
+createUser.prototype.decscore = function() { return this.score --;}
+
+
+function paidUser(name, score, balance) {
+  createUser.call(this, name, score);
+  this.balance = balance;
+} 
+paidUser.prototype.incbal = function() { return this.balance ++;}
+paidUser.prototype.decbal = function() { return this.balance --;}
+Object.setPrototypeOf(paidUser.prototype, createUser.prototype);
+
+var ishav = new paidUser("ishav", 0, 9);
+
+ishav
+
+paidUser {name: "ishav", score: 0, balance: 9}
+
+ishav.incbal()
+9
